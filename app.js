@@ -112,6 +112,14 @@ function renderCard(m) {
           
             ${icons.cam} 360° Tour
           </button>
+
+          <button class="btn-ghost" audio-tour data-url="${m.audio}">
+            Audio 
+          </button>
+
+          <button class="btn-ghost" info-tour data-url="${m.info}">Info
+          </button>
+          
         </div>
       </div>
     </div>
