@@ -165,14 +165,25 @@
     <div id="map-frame" style="width:100%;height:100%;"></div>
   </div>
 
-  <div id="audio-file" class="hidden" style="position :fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:1000;">
-    <button id="close-audio" style="position:absolute;top:20px;right:20px;padding:10px 15px;z-index:1010;">Close</button>
+  <div id="audio-file" class="hidden" 
+     style="position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+  
+  <button id="close-audio" 
+          style="position:absolute;top:20px;right:20px;padding:10px 15px;z-index:1010;">
+    Close
+  </button>
+
+  <h2>Select Language</h2>
+  <div style="margin:20px;">
+    <button id="play-hindi" class="btn">Play Hindi</button>
+    <button id="play-english" class="btn">Play English</button>
   </div>
 
-  <div id="info-file" class="hidden" style="position :fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:1000;">
-    <button id="close-info" style="position:absolute;top:20px;right:20px;padding:10px 15px;z-index:1010;">Close</button>
-  </div>
+  <audio id="audio-player" controls style="margin-top:20px;width:80%;"></audio>
+</div>
 
+
+  
 
   <script defer src="app.js"></script>
 </body>

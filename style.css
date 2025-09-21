@@ -659,3 +659,31 @@ html, body {
 /* Small helpers */
 .icon { width: 16px; height: 16px; vertical-align: middle; }
 
+/*Audio CSS */ 
+
+/* .audio-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.audio-options {
+  position: absolute;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 100;
+}
+
+.audio-options.hidden {
+  display: none;
+}
+
+.audio-options button {
+  background: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+} */

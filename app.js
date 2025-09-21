@@ -87,7 +87,6 @@ function el(html) {
   template.innerHTML = html.trim();
   return template.content.firstElementChild;
 }
-
 function renderCard(m) {
   return `
     <div class="card">
@@ -103,28 +102,23 @@ function renderCard(m) {
           ${m.description}
         </p>
         <div class="actions">
-          
           <button class="btn-ghost" title="View Map" onclick="openMap('${m.gps}')">
             ${icons.mapPin} View Map
           </button>
-
           <button class="btn-ghost view-tour" data-url="${m.tour360}">
-          
             ${icons.cam} 360° Tour
           </button>
-
-          <button class="btn-ghost" audio-tour data-url="${m.audio}">
-            Audio 
+          <button class="btn-ghost play-audio" 
+                  data-hindi="${m.audioHindi}" 
+                  data-english="${m.audioEnglish}">
+            🔊 Audio
           </button>
-
-          <button class="btn-ghost" info-tour data-url="${m.info}">Info
-          </button>
-          
         </div>
       </div>
     </div>
   `;
 }
+
 
 function applyFilters(data) {
   let res = [...data];
@@ -309,6 +303,42 @@ function openMap(gps) {
 document.getElementById("close-map").addEventListener("click", () => {
   mapContainer.classList.add("hidden");
   mapFrame.innerHTML = ""; // remove iframe when closed
+});
+
+
+// Audio Feature 
+
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("play-audio")) {
+    const hindi = e.target.getAttribute("data-hindi");
+    const english = e.target.getAttribute("data-english");
+
+    // Show modal
+    const audioFile = document.getElementById("audio-file");
+    const player = document.getElementById("audio-player");
+
+    audioFile.classList.remove("hidden");
+    player.pause();
+    player.src = ""; // reset
+
+    // Handle Hindi/English buttons
+    document.getElementById("play-hindi").onclick = () => {
+      player.src = hindi;
+      player.play();
+    };
+    document.getElementById("play-english").onclick = () => {
+      player.src = english;
+      player.play();
+    };
+  }
+});
+
+// Close audio modal
+document.getElementById("close-audio").addEventListener("click", () => {
+  document.getElementById("audio-file").classList.add("hidden");
+  const player = document.getElementById("audio-player");
+  player.pause();
+  player.src = "";
 });
 
 
