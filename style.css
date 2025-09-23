@@ -216,12 +216,15 @@ body {
     cursor: pointer;
     transition: var(--transition-smooth);
     font-weight: 500;
+    color: inherit;            /* Keep text color same as parent */
+    box-shadow: none;  
 }
 
 .tab-button.active {
-    background: white;
-    color: var(--primary);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+ 
+  background: transparent;   /* Keep transparent even when active */
+  border: none;
+  box-shadow: none;
 }
 
 .tab-icon {
