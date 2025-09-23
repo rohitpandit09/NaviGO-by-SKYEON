@@ -218,6 +218,10 @@ body {
     font-weight: 500;
     color: inherit;            /* Keep text color same as parent */
     box-shadow: none;  
+    text-decoration: none;
+}
+a, a:hover, a:active, a:visited {
+  text-decoration: none;
 }
 
 .tab-button.active {
