@@ -18,7 +18,7 @@ body {
 /* Navbar */
 .navbar {
   background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
   border-bottom: 1px solid #ddd;
   position: sticky;
   top: 0;
@@ -136,7 +136,7 @@ body {
 /* Navbar */
 .navbar {
   background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
   border-bottom: 1px solid #ddd;
   position: sticky;
   top: 0;
@@ -611,3 +611,29 @@ body {
         justify-content: center;
     }
 }
+
+/* Voice Input Button */
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* space between input, mic, and send button */
+}
+
+.voice-btn {
+    padding: 8px 12px;
+    border-radius: 50%;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.voice-btn:hover {
+    background-color: #45a049;
+}
+

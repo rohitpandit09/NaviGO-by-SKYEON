@@ -4,6 +4,9 @@
 
     <title>Monastery AI Guide</title>
     <link rel="stylesheet" href="ai.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
     
@@ -43,9 +46,9 @@
           <a href="homepage.html" class="nav-btn ">Home</a>
           <a href="/booking" class="nav-btn">Booking</a>
           <a href="/scanner" class="nav-btn">Scanner</a>
-          <a href="/assistant" class="nav-btn">Assistant</a>
+          <a href="/assistant" class="nav-btn active">Assistant</a>
           <!--Removed the map feature-->
-          <a href="archive.html" class="nav-btn active">Archive</a>
+          <a href="archive.html" class="nav-btn">Archive</a>
           <a href="/events" class="nav-btn">Events</a>
           <a href="/experts" class="nav-btn">Experts</a>
           <a href="profiletrip.html" class="nav-btn">Profile</a>
@@ -54,7 +57,7 @@
      
         <!-- Mobile Menu Button -->
         <div class="menu-toggle">
-          <button id="menu-btn">
+          <button id="menu-btn"> .
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                  viewBox="0 0 24 24" fill="none" stroke="currentColor" 
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -62,7 +65,8 @@
               <line x1="4" y1="12" x2="20" y2="12"/>
               <line x1="4" y1="18" x2="20" y2="18"/>
             </svg>
-          </button>
+            </button>
+        
         </div>
 
       </div>
@@ -188,26 +192,38 @@
                 </div>
 
                 <!-- Input Area -->
+                 
                 <div class="input-area">
                     <div class="input-container">
-                        <input 
-                            type="text" 
-                            id="messageInput" 
-                            placeholder="Ask about monasteries, meditation, or spiritual practices..."
-                            onkeypress="handleKeyPress(event)"
-                        >
-                        <button class="send-btn" onclick="sendUserMessage()">
-                            <svg class="send-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 2L11 13"/>
-                                <path d="M22 2L15 22L11 13L2 9L22 2Z"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                        <select id="targetLangSelect"> 
+    <option value="en">English</option>
+    <option value="hi">Hindi</option>
+    <option value="ne">Nepali</option>
+</select>
 
-    <script src="assistant-script.js"></script>
+    <input 
+        type="text" 
+        id="messageInput" 
+        placeholder="Ask about monasteries, meditation, or spiritual practices..."
+        onkeypress="handleKeyPress(event)">
+    
+    <!-- Voice Button -->
+    <button id="micBtn" class="voice-btn" title="Click to speak">🎤</button>
+
+    <!-- Send Button -->
+    <button class="send-btn" onclick="sendUserMessage()"> send 
+        <svg class="send-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 2L11 13"/>
+            <path d="M22 2L15 22L11 13L2 9L22 2Z"/>
+        </svg>
+    </button>
+</div>
+
+
+  
+    </div>
+    
+
+    <script src="assis.js"></script>
 </body>
 </html>
