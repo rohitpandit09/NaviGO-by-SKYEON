@@ -1,0 +1,667 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Container */
+.container {
+  
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #007bff, #00d4ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 8px;
+  background: linear-gradient(90deg, #007bff, #ff0080);
+  background-clip: text;
+  color: transparent;
+}
+
+/* Desktop Menu */
+.menu {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: #e8f0fe;
+  color: #007bff;
+}
+
+.active {
+  background: #007bff;
+  color: #fff !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+}
+
+#menu-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* CSS Variables - Monastery Theme */
+:root {
+    --primary:#1e40af;
+    --primary-glow: hsl(22, 84%, 55%);
+    --secondary: hsl(195, 74%, 35%);
+    --accent: hsl(45, 86%, 58%);
+    --background: hsl(210, 40%, 98%);
+    --muted: hsl(210, 40%, 96%);
+    --muted-foreground: hsl(215, 16%, 47%);
+    --border: hsl(214, 32%, 91%);
+    
+    --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-glow));
+    --gradient-subtle: linear-gradient(180deg, var(--background), var(--muted));
+    --shadow-elegant: 0 10px 30px -10px hsla(22, 84%, 45%, 0.3);
+    --shadow-glow: 0 0 40px hsla(22, 84%, 55%, 0.4);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: hsl(222, 84%, 5%);
+        --muted: hsl(217, 33%, 17%);
+        --muted-foreground: hsl(215, 20%, 65%);
+        --border: hsl(217, 33%, 17%);
+    }
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    background: var(--gradient-subtle);
+    color: hsl(222, 84%, 5%);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: var(--muted-foreground);
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.section-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.past-events-title {
+    color: var(--muted-foreground);
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 0.5rem;
+    border: 2px solid transparent;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: var(--transition-smooth);
+    overflow: hidden;
+}
+
+.card:hover {
+    border-color: hsla(22, 84%, 45%, 0.2);
+    box-shadow: var(--shadow-elegant);
+}
+
+.card-header {
+    padding: 1.5rem 1.5rem 0.75rem;
+}
+
+.card-content {
+    padding: 0 1.5rem 1.5rem;
+}
+
+.card-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    transition: var(--transition-smooth);
+}
+
+.card:hover .card-title {
+    color: var(--primary-glow);
+}
+
+.card-description {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/* Grid Layouts */
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+}
+
+.monasteries-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.events-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Map Styles */
+.map-section {
+    margin-bottom: 3rem;
+}
+
+.map-card {
+    border: 2px solid hsla(22, 84%, 45%, 0.2);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-elegant);
+}
+
+.map-placeholder {
+    height: 24rem;
+    background: linear-gradient(135deg, 
+        hsla(22, 84%, 45%, 0.05), 
+        hsla(195, 74%, 35%, 0.05), 
+        hsla(45, 86%, 58%, 0.05));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.map-content {
+    text-align: center;
+}
+
+.map-icon {
+    width: 4rem;
+    height: 4rem;
+    color: var(--primary);
+    margin: 0 auto 1rem;
+    animation: pulse 2s infinite;
+}
+
+.map-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.map-description {
+    color: var(--muted-foreground);
+    margin-bottom: 1rem;
+}
+
+.gps-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    background: white;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.gps-button:hover {
+    background: var(--muted);
+}
+
+.button-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Map Markers */
+.map-marker {
+    position: absolute;
+    width: 0.75rem;
+    height: 0.75rem;
+    background: var(--primary);
+    border-radius: 50%;
+    box-shadow: var(--shadow-glow);
+    animation: ping 2s infinite;
+}
+
+.marker-1 { top: 1rem; left: 1rem; animation-delay: 0s; }
+.marker-2 { top: 33%; right: 25%; animation-delay: 1s; }
+.marker-3 { bottom: 25%; left: 33%; animation-delay: 2s; }
+.marker-4 { top: 50%; right: 33%; animation-delay: 0.5s; }
+
+/* Search Styles */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.search-wrapper {
+    position: relative;
+    max-width: 28rem;
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    color: var(--muted-foreground);
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+    border: 1px solid hsla(22, 84%, 45%, 0.2);
+    border-radius: 0.375rem;
+    background: white;
+    font-size: 0.875rem;
+    transition: var(--transition-smooth);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px hsla(22, 84%, 45%, 0.1);
+}
+
+/* Tabs Styles */
+.tabs-container {
+    width: 100%;
+}
+
+.tabs-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--muted);
+    border-radius: 0.375rem;
+    padding: 0.25rem;
+    margin-bottom: 2rem;
+}
+
+.tab-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border: none;
+    background: transparent;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    font-weight: 500;
+}
+
+.tab-button.active {
+    background: white;
+    color: var(--primary);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tab-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.125rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 9999px;
+    border: 1px solid transparent;
+}
+
+.badge.primary {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.badge.secondary {
+    background: var(--muted);
+    color: var(--muted-foreground);
+}
+
+.badge.outline {
+    border-color: var(--border);
+    background: transparent;
+}
+
+/* Buttons */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    text-decoration: none;
+    flex: 1;
+}
+
+.button.primary {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.button.primary:hover {
+    opacity: 0.9;
+}
+
+.button.outline {
+    border-color: var(--border);
+    background: white;
+    color: var(--muted-foreground);
+}
+
+.button.outline:hover {
+    background: var(--muted);
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Info Banner */
+.info-banner {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, 
+        hsla(22, 84%, 45%, 0.05), 
+        hsla(195, 74%, 35%, 0.05));
+    border: 1px solid hsla(22, 84%, 45%, 0.2);
+    border-radius: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.info-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+.info-title {
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+}
+
+.info-description {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+}
+
+/* Events Section */
+.events-section {
+    margin-bottom: 3rem;
+}
+
+.events-section:last-child {
+    margin-bottom: 0;
+}
+
+/* Event Card Specific Styles */
+.event-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    margin-bottom: 1rem;
+}
+
+.event-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.event-highlights {
+    margin-bottom: 1rem;
+}
+
+.event-highlights-title {
+    font-weight: 500;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlights-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+.event-actions {
+    display: flex;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes ping {
+    0% { transform: scale(1); opacity: 1; }
+    75%, 100% { transform: scale(2); opacity: 0; }
+}
+
+/* Monastery Card Details */
+.monastery-details {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    margin-bottom: 1rem;
+}
+
+.monastery-details p {
+    margin-bottom: 0.25rem;
+}
+
+.monastery-description {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.gps-coordinates {
+    font-size: 0.75rem;
+    color: var(--muted-foreground);
+    background: hsla(210, 40%, 96%, 0.5);
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1rem;
+}
+
+.gps-coordinates .font-medium {
+    font-weight: 500;
+}
+
+.monastery-actions {
+    display: flex;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem 0.5rem;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .monasteries-grid,
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .map-placeholder {
+        height: 20rem;
+    }
+}
