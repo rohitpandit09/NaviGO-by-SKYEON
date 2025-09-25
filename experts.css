@@ -151,8 +151,11 @@ body {
 }
 
 .page-container {
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6988ec 0%, #f6f5f8 100%);
     min-height: 100vh;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    color: #333;
 }
 
 .container {
@@ -176,7 +179,7 @@ body {
 
 .header-description {
     font-size: 1.125rem;
-    color: #6b7280;
+    color: #16171a;
     max-width: 42rem;
     margin: 0 auto;
 }

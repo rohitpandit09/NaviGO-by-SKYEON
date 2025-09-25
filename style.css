@@ -1,6 +1,3 @@
-/* Added by ROHIT (CSS of overall website)*/
-
-
 * {
     margin: 0;
     padding: 0;
@@ -219,10 +216,11 @@ body {
 }
 
 .tab-button.active {
-    background: white;
+    background: transparent;
     color: var(--primary);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
+    box-shadow: none;
+    border: none;
+  }
 
 .tab-icon {
     width: 1rem;
@@ -236,55 +234,10 @@ body {
 .tab-content.active {
     display: block;
 }
-
-/*--------------------------------------------------------------------*/
-/*--------------------------------------------------------------------*/
-
-/* --- Fix White Flash on Click --- */
-
-/* Remove tap highlight (mobile/webkit) */
-a, button, input {
-  -webkit-tap-highlight-color: transparent;
+a, a:hover, a:active, a:visited {
+  text-decoration: none;
 }
 
-/* Remove ugly focus/active flash */
-a:focus, a:active,
-button:focus, button:active,
-input:focus, input:active {
-  outline: none !important;
-  background-color: inherit !important;
-  color: inherit !important;
-  box-shadow: none !important;
-}
-
-/* Specific fix for your .tab-button */
-.tab-button:focus,
-.tab-button:active {
-  background: inherit !important;
-  color: inherit !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* Optional: give a subtle custom focus style for accessibility */
-a:focus-visible, button:focus-visible, input:focus-visible {
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3); /* soft glow */
-  border-radius: 6px;
-}
-
-/*:root {
-  --bg: oklch(0.99 0.01 240);
-  --fg: oklch(0.15 0.02 240);
-  --muted: oklch(0.94 0.02 240);
-  --muted-fg: oklch(0.50 0.02 240);
-  --primary: oklch(0.55 0.18 240);
-  --primary-2: oklch(0.60 0.20 300);
-  --accent: oklch(0.92 0.03 30);
-  --card: #ffffff;
-  --border: #eaeef5;
-  --shadow: 0 8px 28px rgba(37, 99, 235, 0.10);
-}
-*/
 * { box-sizing: border-box; }
 html, body {
   margin: 0;
@@ -658,32 +611,3 @@ html, body {
 
 /* Small helpers */
 .icon { width: 16px; height: 16px; vertical-align: middle; }
-
-/*Audio CSS */ 
-
-/* .audio-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.audio-options {
-  position: absolute;
-  background: white;
-  border: 1px solid #ddd;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  z-index: 100;
-}
-
-.audio-options.hidden {
-  display: none;
-}
-
-.audio-options button {
-  background: none;
-  border: none;
-  padding: 5px;
-  cursor: pointer;
-} */

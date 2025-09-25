@@ -2,7 +2,7 @@
 const experts = [
     {
         id: 1,
-        name: "Bablu blast",
+        name: "Tenzin Norbu",
         title: "Senior Buddhist Scholar",
         location: "Leh, Ladakh",
         specialties: ["Tibetan Buddhism", "Meditation", "Monastery History"],
@@ -18,7 +18,7 @@ const experts = [
     },
     {
         id: 2,
-        name: "Jonny sins",
+        name: "Dr. Pema Yangchen",
         title: "Tibetan Art Historian",
         location: "Dharamshala, HP",
         specialties: ["Buddhist Art", "Thangka Paintings", "Iconography"],
@@ -34,10 +34,10 @@ const experts = [
     },
     {
         id: 3,
-        name: "Mia Khalifa",
+        name: "Lama Sonam Wangdu",
         title: "Meditation Master",
         location: "Spiti Valley, HP",
-        specialties: ["Meditation", "Philosophy", "Spiritual Guidance","jewellery designer"],
+        specialties: ["Meditation", "Philosophy", "Spiritual Guidance"],
         languages: ["English", "Tibetan", "Hindi"],
         rating: 5.0,
         reviews: 234,
@@ -50,7 +50,7 @@ const experts = [
     },
     {
         id: 4,
-        name: "Deepak kalal",
+        name: "Rigzin Dolma",
         title: "Cultural Guide & Translator",
         location: "Manali, HP",
         specialties: ["Cultural Tours", "Translation", "Local Customs"],
@@ -66,7 +66,7 @@ const experts = [
     },
     {
         id: 5,
-        name: "shinchan",
+        name: "Geshe Lobsang Tenpa",
         title: "Philosophy Teacher",
         location: "McLeod Ganj, HP",
         specialties: ["Buddhist Philosophy", "Debate", "Theology"],
@@ -82,7 +82,7 @@ const experts = [
     },
     {
         id: 6,
-        name: "Dora the explora",
+        name: "Ani Tenzin Chodon",
         title: "Monastery Life Expert",
         location: "Keylong, HP",
         specialties: ["Nun Traditions", "Daily Practices", "Women in Buddhism"],
