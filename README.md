@@ -5,4 +5,5 @@ Hackathon project
 1) >index.html - manuscripts
    >style.css - manuscripts
    > app.js - manuscripts
-   
+2) >murals.html- murals
+   >
