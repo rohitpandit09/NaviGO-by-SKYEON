@@ -86,63 +86,65 @@ class BookingSystem {
             train: [
                 {
                     id: 'TR001',
-                    provider: 'Express Rail',
-                    departure: '7:00 AM',
-                    arrival: '3:30 PM',
-                    duration: '8h 30m',
-                    price: 89,
-                    class: 'First Class',
-                    amenities: 'WiFi, Meals'
+                    provider: 'Siliguri Express',
+                    departure: '5:30 AM',
+                    arrival: '11:30 AM',
+                    duration: '6h 0m',
+                    price: 100,
+                    class: 'AC Chair Car',
+                    amenities: 'WiFi, Snacks'
                 },
                 {
                     id: 'TR002',
-                    provider: 'Metro Connect',
-                    departure: '2:15 PM',
-                    arrival: '9:45 PM',
-                    duration: '7h 30m',
-                    price: 65,
-                    class: 'Standard',
-                    amenities: 'WiFi'
+                    provider: 'Gangtok Passenger',
+                    departure: '2:00 PM',
+                    arrival: '8:30 PM',
+                    duration: '6h 30m',
+                    price: 80,
+                    class: 'Sleeper',
+                    amenities: 'Basic Seating'
                 }
             ],
             bus: [
                 {
                     id: 'BS001',
-                    provider: 'Comfort Lines',
-                    departure: '9:00 AM',
-                    arrival: '7:30 PM',
-                    duration: '10h 30m',
-                    price: 45,
+                    provider: 'Sikkim Deluxe',
+                    departure: '6:00 AM',
+                    arrival: '2:30 PM',
+                    duration: '8h 30m',
+                    price: 50,
                     type: 'AC Sleeper',
                     amenities: 'WiFi, Charging'
                 },
                 {
                     id: 'BS002',
-                    provider: 'Highway Express',
-                    departure: '11:30 PM',
-                    arrival: '8:00 AM',
-                    duration: '8h 30m',
-                    price: 35,
-                    type: 'Semi-sleeper',
+                    provider: 'Mountain Link',
+                    departure: '10:00 PM',
+                    arrival: '6:00 AM',
+                    duration: '8h 0m',
+                    price: 40,
+                    type: 'Non-AC Sleeper',
                     amenities: 'Charging'
                 }
+                  
             ],
             cab: [
+                
                 {
                     id: 'CB001',
-                    provider: 'RideNow',
+                    provider: 'Sikkim Rides',
                     type: 'Sedan',
-                    duration: '2h 45m',
-                    price: 120,
-                    rating: '4.8',
+                    duration: '2h 15m',
+                    price: 150,
+                    rating: '4.7',
                     features: 'AC, GPS'
                 },
                 {
                     id: 'CB002',
-                    provider: 'QuickCabs',
+                    provider: 'Himalayan Cabs',
                     type: 'SUV',
-                    duration: '2h 30m',
-                    price: 180,
+                    duration: '2h 0m',
+                    price: 200,
                     rating: '4.9',
                     features: 'AC, GPS, WiFi'
                 }
@@ -150,31 +152,31 @@ class BookingSystem {
             hotel: [
                 {
                     id: 'HT001',
-                    provider: 'Grand Palace Hotel',
+                    provider: 'Gangtok Grand Hotel',
                     type: 'Deluxe Room',
-                    checkIn: '3:00 PM',
+                    checkIn: '2:00 PM',
                     checkOut: '11:00 AM',
-                    price: 150,
-                    rating: '4.5',
+                    price: 180,
+                    rating: '4.6',
                     amenities: 'Pool, Spa, Gym'
                 },
                 {
                     id: 'HT002',
-                    provider: 'Budget Stay Inn',
+                    provider: 'Pelling Hillside Inn',
                     type: 'Standard Room',
-                    checkIn: '2:00 PM',
+                    checkIn: '3:00 PM',
                     checkOut: '12:00 PM',
-                    price: 80,
-                    rating: '4.2',
+                    price: 90,
+                    rating: '4.3',
                     amenities: 'WiFi, Breakfast'
                 },
                 {
                     id: 'HT003',
-                    provider: 'Luxury Suites',
+                    provider: 'Luxury Suites Sikkim',
                     type: 'Executive Suite',
                     checkIn: '4:00 PM',
                     checkOut: '11:00 AM',
-                    price: 300,
+                    price: 320,
                     rating: '4.8',
                     amenities: 'Pool, Spa, Concierge'
                 }
@@ -301,7 +303,7 @@ class BookingSystem {
             <div class="option-card" data-option='${JSON.stringify({...option, searchData})}'>
                 <div class="option-header">
                     <h4 class="option-title">${option.provider}</h4>
-                    <div class="option-price">$${totalPrice}</div>
+                    <div class="option-price">₹${totalPrice}</div>
                 </div>
                 <div class="option-details">
                     ${detailsHTML}
@@ -341,8 +343,8 @@ class BookingSystem {
                     <div><strong>Destination:</strong> ${searchData.destination}</div>
                     <div><strong>Date:</strong> ${new Date(searchData.date).toLocaleDateString()}</div>
                     <div><strong>Travelers:</strong> ${searchData.travelers}</div>
-                    <div><strong>Price per person:</strong> $${option.price}</div>
-                    <div><strong>Total Price:</strong> $${totalPrice}</div>
+                    <div><strong>Price per person:</strong> ₹${option.price}</div>
+                    <div><strong>Total Price:</strong> ₹${totalPrice}</div>
                 </div>
             </div>
         `;
@@ -439,17 +441,17 @@ class BookingSystem {
         
         return `
             <div class="history-card">
-                <div class="history-info">
+                 <div class="history-info">
                     <h4>${booking.provider}</h4>
                     <p><span class="booking-id">${booking.id}</span></p>
                     <p><strong>Type:</strong> ${searchData.type.charAt(0).toUpperCase() + searchData.type.slice(1)}</p>
                     <p><strong>Destination:</strong> ${searchData.destination}</p>
                     <p><strong>Date:</strong> ${new Date(searchData.date).toLocaleDateString()}</p>
                     <p><strong>Travelers:</strong> ${searchData.travelers}</p>
-                    <p><strong>Total:</strong> $${totalPrice}</p>
+                    <p><strong>Total:</strong> ₹${totalPrice}</p>
                     <p><strong>Booked:</strong> ${bookingDate}</p>
                     <span class="status ${booking.status === 'confirmed' ? 'status-confirmed' : 'status-cancelled'}">
-                        ${booking.status.charAt(0).toUpperCase() + booking.status.slice(1)}
+                    ${booking.status.charAt(0).toUpperCase() + booking.status.slice(1)}
                     </span>
                 </div>
                 <div class="history-actions">
@@ -457,11 +459,11 @@ class BookingSystem {
                         `<button class="btn btn-danger cancel-booking" data-booking-id="${booking.id}">Cancel</button>` : 
                         '<span style="color: #666;">Cancelled</span>'
                     }
-                    <button class="btn btn-info" onclick="alert('Feature coming soon!')">View Details</button>
+                <button class="btn btn-info" onclick="alert('Feature coming soon!')">View Details</button>
                 </div>
             </div>
-        `;
-    }
+            `;
+        }
 
     cancelBooking(bookingId) {
         if (confirm('Are you sure you want to cancel this booking?')) {
