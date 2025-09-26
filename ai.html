@@ -92,22 +92,7 @@
                 
                 <!-- Quick Actions -->
                 <div class="quick-actions">
-                    <button class="action-btn" onclick="sendQuickMessage('Help me find nearby monasteries')">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                        Find Nearby
-                    </button>
-                    <button class="action-btn" onclick="sendQuickMessage('Help me plan a monastery visit')">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
-                            <line x1="16" x2="16" y1="2" y2="6"/>
-                            <line x1="8" x2="8" y1="2" y2="6"/>
-                            <line x1="3" x2="21" y1="10" y2="10"/>
-                        </svg>
-                        Plan Visit
-                    </button>
+                    
                     <button class="action-btn" onclick="sendQuickMessage('I want to start voice chat')">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
@@ -116,11 +101,58 @@
                         Voice Chat
                     </button>
                     <button class="action-btn" onclick="sendQuickMessage('Help me scan a QR code')">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
-                            <circle cx="12" cy="13" r="3"/>
-                        </svg>
-                        Scan QR
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke="#2f4f62" stroke-width="16" >
+  <!-- Chip body -->
+  <rect x="128" y="128" width="256" height="256" rx="40" ry="40" fill="#add8f6" stroke="#2f4f62"/>
+
+  <!-- AI letters -->
+  <text x="256" y="300" text-anchor="middle" font-size="120" font-family="Arial, sans-serif" fill="white" font-weight="bold">AI</text>
+
+  <!-- Circuit lines + circles -->
+  <g>
+    <!-- Top -->
+    <path d="M256 32v96"/>
+    <circle cx="256" cy="32" r="16" fill="none"/>
+
+    <path d="M176 48l32 80"/>
+    <circle cx="176" cy="48" r="16" fill="none"/>
+
+    <path d="M336 48l-32 80"/>
+    <circle cx="336" cy="48" r="16" fill="none"/>
+
+    <!-- Bottom -->
+    <path d="M256 480v-96"/>
+    <circle cx="256" cy="480" r="16" fill="none"/>
+
+    <path d="M176 464l32-80"/>
+    <circle cx="176" cy="464" r="16" fill="none"/>
+
+    <path d="M336 464l-32-80"/>
+    <circle cx="336" cy="464" r="16" fill="none"/>
+
+    <!-- Left -->
+    <path d="M32 256h96"/>
+    <circle cx="32" cy="256" r="16" fill="none"/>
+
+    <path d="M48 176l80 32"/>
+    <circle cx="48" cy="176" r="16" fill="none"/>
+
+    <path d="M48 336l80-32"/>
+    <circle cx="48" cy="336" r="16" fill="none"/>
+
+    <!-- Right -->
+    <path d="M480 256h-96"/>
+    <circle cx="480" cy="256" r="16" fill="none"/>
+
+    <path d="M464 176l-80 32"/>
+    <circle cx="464" cy="176" r="16" fill="none"/>
+
+    <path d="M464 336l-80-32"/>
+    <circle cx="464" cy="336" r="16" fill="none"/>
+  </g>
+</svg>
+
+                        AI-Info
                     </button>
                 </div>
             </div>
