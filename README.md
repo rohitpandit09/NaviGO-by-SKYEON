@@ -2,8 +2,8 @@
 Hackathon project 
 
 # NAME OF FILES FOR DEPLOYMENT
-1) >index.html - manuscripts
-   >style.css - manuscripts
+1) >index.html - manuscripts**
+   >style.css - manuscripts**
    > app.js - manuscripts
 2) >murals.html- murals
    >style.css- murals
