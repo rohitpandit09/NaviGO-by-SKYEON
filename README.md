@@ -3,15 +3,16 @@ Hackathon project
 
 # NAME OF FILES FOR DEPLOYMENT
 1) **Manuscript**
-   >index.html <br>
+   >archive.html <br>
    >style.css <br>
    >app.js 
 2) **Murals**
    >murals.html <br>
    >style.css <br>
-   >
+   >style.css<br>
+   >murals.css
 3) **Homepage**
-   >homepage.html<br>
+   >index.html<br>
    >hommpage.css <br>
    >photo1.avif 
 4) **AR scanner**
