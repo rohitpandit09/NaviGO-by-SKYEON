@@ -13,39 +13,54 @@ class MonumentScanner {
         // Mock monument database
         this.monumentDatabase = [
             {
-                name: "Taj Mahal",
-                location: "Agra, India",
-                description: "The Taj Mahal is an ivory-white marble mausoleum on the right bank of the river Yamuna in the Indian city of Agra. It was commissioned in 1632 by the Mughal emperor Shah Jahan to house the tomb of his favourite wife, Mumtaz Mahal.",
+                name: "Rumtek Monastery",
+                location: "Gangtok, Sikkhim, India",
+                description: "Rumtek Monastery, located near Gangtok in Sikkim, is one of the most important seats of the Kagyu school of Tibetan Buddhism. Built in the 16th century and later rebuilt in the 1960s, it houses sacred relics and rare Buddhist scriptures. The monastery is also the residence of the Karmapa, the spiritual head of the Kagyu lineage.
+",
                 facts: [
-                    "Built between 1632-1653",
-                    "UNESCO World Heritage Site since 1983",
-                    "Made of white Makrana marble",
-                    "Attracts 6-8 million visitors annually",
-                    "One of the New Seven Wonders of the World"
+                    "It is the largest monastery in Sikkim and is often called the Dharma Chakra Centre.",
+
+                    "Originally built in the 16th century, it was rebuilt in the 1960s by the 16th Karmapa after falling into ruins.",
+
+                    "It serves as the main seat of the Karmapa in exile, making it a spiritually significant site.",
+
+                    "The monastery’s Golden Stupa contains the relics of the 16th Karmapa.",
+
+                    "Its location on a hilltop offers breathtaking views of Gangtok and the surrounding Himalayas."
                 ]
             },
             {
-                name: "Eiffel Tower",
-                location: "Paris, France",
-                description: "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower.",
+                name: "Enchey Monastery",
+                location: "Gangtok, Sikkhim, India ",
+                description: "Enchey Monastery, located about 3 km from Gangtok, Sikkim, is a 200-year-old Buddhist monastery of the Nyingma order. It was originally a hermitage built by Lama Druptob Karpo, a tantric master known for his flying powers. The monastery is revered for its spiritual significance and beautiful setting with views of Mt. Kanchenjunga.
+",
                 facts: [
-                    "Completed in 1889",
-                    "324 meters tall",
-                    "Weighs approximately 10,100 tons",
-                    "Painted every 7 years",
-                    "Most visited paid monument in the world"
+                    "It belongs to the Nyingma sect of Tibetan Buddhism and is over 200 years old.",
+
+                    "The monastery was founded by Lama Druptob Karpo, a tantric master believed to have flying powers.",
+
+                    "Its name “Enchey” means “the solitary temple”, as it was originally a small hermitage.",
+
+                    "From its hilltop location, visitors get panoramic views of Mt. Kanchenjunga and Gangtok town.",
+
+                    "It houses sacred images of Guru Padmasambhava and other deities, attracting pilgrims and devotees."
                 ]
             },
             {
-                name: "Statue of Liberty",
-                location: "New York, USA",
-                description: "The Statue of Liberty is a neoclassical sculpture on Liberty Island in New York Harbor in New York City. The copper statue was a gift from France to the United States.",
+                name: "Pemayangtse Monastery",
+                location: " Gyalshing district, Sikkhim, India",
+                description: "Pemayangtse Monastery, located near Pelling in Sikkim, is one of the oldest and most important monasteries of the **Nyingma sect** of Tibetan Buddhism. Built in the early 1700s, it is known for its **traditional Sikkimese architecture** and richly decorated interiors. The monastery is a key spiritual center and hosts the **Cham (mask dance) festival** attracting many pilgrims and tourists.
+",
                 facts: [
-                    "Dedicated in 1886",
-                    "46 meters tall (151 feet)",
-                    "Made of copper sheets",
-                    "Symbol of freedom and democracy",
-                    "Torch represents enlightenment"
+                    "The monastery was built in the early 1700s by Lama Lhatsun Chempo, a revered saint of Sikkim.",
+
+                    "It is known for its beautiful traditional Sikkimese architecture and intricately carved wooden structures.",
+
+                    "The monastery houses ancient Buddhist scriptures, paintings, and statues of Padmasambhava and other deities.",
+
+                    "Pemayangtse hosts the colorful Cham dance festival every year, especially during the Sikkimese New Year.",
+
+                    "The monastery is part of the Five Great Monasteries of Sikkim making it a significant spiritual and cultural landmark."
                 ]
             }
         ];
@@ -327,4 +342,5 @@ class MonumentScanner {
 // Initialize the scanner when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new MonumentScanner();
+
 });
