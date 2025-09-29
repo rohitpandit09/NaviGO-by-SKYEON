@@ -9,7 +9,6 @@ Hackathon project
 2) **Murals**
    >murals.html <br>
    >style.css <br>
-   >style.css<br>
    >murals.css
 3) **Homepage**
    >index.html<br>
