@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monument Scanner</title>
+    <link rel="stylesheet" href="scanner.css">
+    
+    <script defer src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    
+    <script defer src="scanner.js"></script>
+</head>
+<body>
+    
+    <div class="root">
+        <ol 
+        tabindex="-1" 
+        class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 
+                sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]">
+        </ol>
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <a href="/" class="brand">
+                        <div class="logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3
+                                        c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5
+                                        c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2
+                                        3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
+                            </svg>
+                        </div>
+                        <span class="brand-name">NaviGo</span>
+                    </a>
+
+                    <div class="menu">
+                        <a href="index.html" class="nav-btn">Home</a>
+                        <a href="booking.html" class="nav-btn">Booking</a>
+                        <a href="scanner.html" class="nav-btn active">Scanner</a>
+                        <a href="ai.html" class="nav-btn">Assistant</a>
+                        <a href="archive.html" class="nav-btn">Archive</a>
+                        <a href="event.html" class="nav-btn">Events</a>
+                        <a href="experts.html" class="nav-btn">Experts</a>
+                    </div>
+                
+                    <div class="menu-toggle">
+                        <button id="menu-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="4" y1="6" x2="20" y2="6"/>
+                                <line x1="4" y1="12" x2="20" y2="12"/>
+                                <line x1="4" y1="18" x2="20" y2="18"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <header class="header">
+                <h1>Monument Scanner</h1>
+                <p>Point your camera at a monument to learn more about it</p>
+            </header>
+
+            <div class="scanner-container">
+                <div class="camera-viewport">
+                    <video id="cameraFeed" autoplay playsinline></video>
+                    <canvas id="captureCanvas" style="display: none;"></canvas>
+                    
+                    <div id="arOverlays" class="ar-overlays">
+                        <div id="scanningIndicator" class="scanning-indicator">
+                            <div class="scan-line"></div>
+                            <p>Scanning for monuments...</p>
+                        </div>
+                        <div id="detectionBox" class="detection-box hidden">
+                            <div class="info-label">Monument Detected!</div>
+                        </div>
+                    </div>
+
+                    <div class="camera-controls">
+                        <button id="startCamera" class="btn btn-primary">Start Camera</button>
+                        <button id="captureBtn" class="btn btn-capture hidden">Capture</button>
+                        <button id="stopCamera" class="btn btn-secondary hidden">Stop Camera</button>
+                    </div>
+                </div>
+
+                <div id="resultsSection" class="results-section hidden">
+                    <h2>Monument Information</h2>
+                    <div id="monumentInfo" class="monument-info">
+                        </div>
+                </div>
+
+                <div id="offlineIndicator" class="offline-indicator hidden">
+                    <p>⚠️ Offline mode: scanning not available, showing cached data instead</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
