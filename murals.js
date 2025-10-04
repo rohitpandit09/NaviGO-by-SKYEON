@@ -46,7 +46,7 @@ async function displayMurals() {
 
         card.innerHTML = `
             <h3 class="card-title">${mural.name}</h3>
-            <img src="${mural.imageUrl || 'fallback.jpg'}" class="card-image"/>
+            
             <div class="card-footer">
                 <button class="info-btn" onclick="showInfo('${mural.id}')">Info</button>
                 
@@ -56,7 +56,7 @@ async function displayMurals() {
     });
 }
 
-// ---------------- Info Button ----------------
+
 // ---------------- Info Button ----------------
 function showInfo(muralId) {
     db.collection("Murals").doc(muralId).get()
