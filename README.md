@@ -1,5 +1,5 @@
 # NaviGO-by-SKYEON
-Hackathon project 
+Hackathon project for SIH 2025
 
 # NAME OF FILES FOR DEPLOYMENT
 1) **Manuscript**
